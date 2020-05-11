@@ -17,6 +17,7 @@ mydata <- mydata %>%
   select(Season, Player, Age, Tm, Pos, GP, G, A, PIM)
 rm(mydata)
 
+
 #FILTER----
 #Subset rows using conditional filters
 mydata$Tm <- trimws(mydata$Tm, which = c('both')) #Strips white space on both sides of the team name
@@ -32,6 +33,14 @@ mydata_cbj_nsh <- mydata %>%
   filter(Tm == 'CBJ' | Tm == 'NSH')
 rm(mydata, mydata_cbj_nsh, mydata_det)
 
+#ARRANGE----
+#Arrange data by number of goals scored (most to least)
+mydata <- mydata %>% 
+  select(Season, Player, Age, Tm, Pos, GP, G, A, PIM)
+mydata$G <- as.numeric(as.character(mydata$G))
+mydata_arranged <- mydata %>% 
+  arrange(desc(G))
+rm(mydata, mydata_arranged)
 
 #MUTATE----
 mydata <- mydata %>% 
@@ -69,7 +78,63 @@ rm(mydata, mydata_check)
   
   
 
+#RENAME----
+#You can easily rename a column using rename(new_name = old_name)
+mydata <- mydata %>% 
+  select(Season, Player, Age, Tm, Pos, GP, G, A, PIM)
+mydata <- mydata %>% 
+  rename(Team = Tm, Goals = G)
+rm(mydata)
+
+#STRING REPLACE----
+#You can replace strings
+mydata <- mydata %>% 
+  select(Season, Player, Age, Tm, Pos, GP, G, A, PIM) %>% 
+  filter(Tm == ' DET ')
+mydata$Tm <- mydata$Tm %>% 
+  str_replace(' DET ', 'Detroit')
+rm(mydata)
+
+
+#CONVERT STRING TO...----
+mydata <- mydata %>% 
+  select(Season, Player, Age, Tm, Pos, GP, G, A, PIM) %>% 
+  filter(Tm == ' DET ')
+#Covert all characters to lower case
+mydata$Tm <- mydata$Tm %>% 
+  str_to_lower()
+#Convert all characters to upper case
+mydata$Tm <- mydata$Tm %>% 
+  str_to_upper()
+rm(mydata)
+
+
 #RBIND----
+#Create two new data frames (both must have the same column headers)
+mydata_det <- mydata %>% 
+  select(Season, Player, Age, Tm, Pos, GP, G, A, PIM) %>% 
+  filter(Tm == ' DET ' & Season == 2018)
+mydata_cbj <- mydata %>% 
+  select(Season, Player, Age, Tm, Pos, GP, G, A, PIM) %>% 
+  filter(Tm == ' CBJ ' & Season == 2018)
+#Bind the two data frames
+mydata_bound <- rbind(mydata_det, mydata_cbj)
+rm(mydata, mydata_det, mydata_cbj, mydata_bound)
+
+#FULL JOIN----
+#Create two new data frames
+mydata_1 <- mydata %>% 
+  select(Season, Player, Age, Tm, Pos, GP, G) %>% 
+  filter(Tm == ' DET ' & Season == 2018)
+mydata_2 <- mydata %>% 
+  select(Season, Player, Tm, A, PIM) %>% 
+  filter(Tm == ' DET ' & Season == 2018)
+#Bind the two data frames
+mydata_bound <- full_join(mydata_1, mydata_2)
+rm(mydata, mydata_1, mydata_2, mydata_bound)
 
 
-#CBIND----
+
+
+
+
