@@ -1,6 +1,9 @@
 # Data Wrangling in R
 
-##data_wrangle_tools.R
+## data_wrangle_tools.R
+
+<hr>
+
 This script contains examples for the following wrangling tools:
 1. `select()` - select specified columns
 2. `filter()` - filter rows based on conditionals
