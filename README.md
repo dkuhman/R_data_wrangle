@@ -12,4 +12,4 @@ This script contains examples for the following wrangling tools:
 8. `str_to_lower()` - convert all characters to lower case
 9. `str_to_upper()` - convert all characters to upper case
 10. `rbind()` - bind multiple data frames by row (resulting df is longer)
-11. `cbind()` - bind multiple data frames by column (resulting df is wider)
+11. `full_join()` - bind multiple data frames by column (resulting df is wider)
