@@ -1,10 +1,10 @@
 # Data Wrangling in R
 
-## data_wrangle_tools.R
+## General Data Wrangling
+#### Code: data_wrangle_tools.R
+#### Data: skater_stats.csv
 
-<hr>
-
-This script contains examples for the following wrangling tools:
+This script contains general examples for the following wrangling tools:
 1. `select()` - select specified columns
 2. `filter()` - filter rows based on conditionals
 3. `arrange()` - arrange rows based on values in specified column
@@ -16,3 +16,12 @@ This script contains examples for the following wrangling tools:
 9. `str_to_upper()` - convert all characters to upper case
 10. `rbind()` - bind multiple data frames by row (resulting df is longer)
 11. `full_join()` - bind multiple data frames by column (resulting df is wider)
+
+<hr>
+
+## Tour de France Analysis
+#### Folder: tdf_analysis
+#### Code: tdf_analysis.R
+#### Data: tdf_stats.csv
+
+This analysis includes an R script that cleans Tour de France overall results from 1990 to 2019. In particular, it provides good examples for `substr()`, `gsub()`, `group_by()`, and `mutate()`. It also provides examples of multiple ggplot2 functions and produces the following figures:
