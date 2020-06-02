@@ -26,4 +26,6 @@
 
 **Description:** This analysis includes an R script that cleans Tour de France overall results from 1990 to 2019. In particular, it provides good examples for `substr()`, `gsub()`, `group_by()`, and `mutate()`. It also provides examples of multiple ggplot2 functions and produces the following figures:
 
-**What I learned:** For this analysis, I learned a lot about working with strings - particularly to convert race times and gap times from "xxH xx' xx''" format to "xx:xx:xx" format and eventually to strict hours (e.g., xx.xx hours). I also learned how to impliment `geom_text` within `ggplot2`.
+<img src='tdf_analysis/media/winner_vel.jpeg' width=45%> <img src='tdf_analysis/media/gap_to_winner.jpeg' width=45%> <img src='tdf_analysis/media/gap_2_4_only.jpeg' width=45% display=inline>
+
+**What I learned:** For this analysis, I learned a lot about working with strings - particularly to convert race times and gap times from "xxH xx' xx''" format to "xx:xx:xx" format and eventually to strict hours (e.g., xx.xx hours). I also learned how to impliment `geom_text` within `ggplot2` to add data labels and how to adjust the angle of axis text.
