@@ -4,7 +4,7 @@
 #### Code: data_wrangle_tools.R
 #### Data: skater_stats.csv
 
-This script contains general examples for the following wrangling tools:
+**Description:** This script contains general examples for the following wrangling tools:
 1. `select()` - select specified columns
 2. `filter()` - filter rows based on conditionals
 3. `arrange()` - arrange rows based on values in specified column
@@ -24,4 +24,6 @@ This script contains general examples for the following wrangling tools:
 #### Code: tdf_analysis.R
 #### Data: tdf_stats.csv
 
-This analysis includes an R script that cleans Tour de France overall results from 1990 to 2019. In particular, it provides good examples for `substr()`, `gsub()`, `group_by()`, and `mutate()`. It also provides examples of multiple ggplot2 functions and produces the following figures:
+**Description:** This analysis includes an R script that cleans Tour de France overall results from 1990 to 2019. In particular, it provides good examples for `substr()`, `gsub()`, `group_by()`, and `mutate()`. It also provides examples of multiple ggplot2 functions and produces the following figures:
+
+**What I learned:** For this analysis, I learned a lot about working with strings - particularly to convert race times and gap times from "xxH xx' xx''" format to "xx:xx:xx" format and eventually to strict hours (e.g., xx.xx hours). I also learned how to impliment `geom_text` within `ggplot2`.
