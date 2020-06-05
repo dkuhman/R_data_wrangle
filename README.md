@@ -1,8 +1,9 @@
 # Data Wrangling in R
 
 ## General Data Wrangling
-#### Code: data_wrangle_tools.R
-#### Data: skater_stats.csv
+**Code:** data_wrangle_tools.R
+
+**Data:** data/skater_stats.csv
 
 **Description:** This script contains general examples for the following wrangling tools:
 1. `select()` - select specified columns
@@ -20,9 +21,9 @@
 <hr>
 
 ## Tour de France Analysis
-#### Folder: tdf_analysis
-#### Code: tdf_analysis.R
-#### Data: tdf_stats.csv
+**Code:** tdf_analysis/tdf_analysis.R
+
+**Data:** tdf_stats.csv
 
 **Description:** This analysis includes an R script that cleans Tour de France overall results from 1990 to 2019. In particular, it provides good examples for `substr()`, `gsub()`, `group_by()`, and `mutate()`. It also provides examples of multiple ggplot2 functions and produces the following figures:
 
