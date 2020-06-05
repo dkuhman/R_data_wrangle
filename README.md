@@ -18,6 +18,8 @@
 10. `rbind()` - bind multiple data frames by row (resulting df is longer)
 11. `full_join()` - bind multiple data frames by column (resulting df is wider)
 
+**Video:** https://youtu.be/oRW1oSnD5VU
+
 <hr>
 
 ## Tour de France Analysis
